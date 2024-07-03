@@ -13,7 +13,7 @@
             <div class="flex h-16 items-center justify-between">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <img class="h-8 w-8" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/SK_Gaming_Logo_2022.svg/512px-SK_Gaming_Logo_2022.svg.png?20221204172956" alt="Your Company">
+                        <img class="h-8 w-8" src="https://previews.123rf.com/images/wikagraphic/wikagraphic2011/wikagraphic201102570/158559694-initial-letter-sk-logotype-company-name-colored-blue-and-magenta-swoosh-design-vector-logo-for.jpg" alt="Your Company">
                     </div>
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-baseline space-x-4">
@@ -39,7 +39,7 @@
                                 <button type="button" class="relative flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                                     <span class="absolute -inset-1.5"></span>
                                     <span class="sr-only">Open user menu</span>
-                                    <img class="h-8 w-8 rounded-full" src="https://static.vecteezy.com/system/resources/previews/004/674/196/non_2x/sk-logo-modern-sk-initial-logo-vector.jpg" alt="">
+                                    <img class="h-8 w-8 rounded-full" src="https://previews.123rf.com/images/wikagraphic/wikagraphic2011/wikagraphic201102570/158559694-initial-letter-sk-logotype-company-name-colored-blue-and-magenta-swoosh-design-vector-logo-for.jpg" alt="">
                                 </button>
                             </div>
 
@@ -74,7 +74,7 @@
             <div class="border-t border-gray-700 pb-3 pt-4">
                 <div class="flex items-center px-5">
                     <div class="flex-shrink-0">
-                        <img class="h-10 w-10 rounded-full" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/SK_Gaming_Logo_2022.svg/512px-SK_Gaming_Logo_2022.svg.png?20221204172956" alt="">
+                        <img class="h-10 w-10 rounded-full" src="https://previews.123rf.com/images/wikagraphic/wikagraphic2011/wikagraphic201102570/158559694-initial-letter-sk-logotype-company-name-colored-blue-and-magenta-swoosh-design-vector-logo-for.jpg" alt="">
                     </div>
                     <div class="ml-3">
                         <div class="text-base font-medium leading-none text-white">Shoaib Kaleem</div>
