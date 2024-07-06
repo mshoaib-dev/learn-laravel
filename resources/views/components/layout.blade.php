@@ -19,7 +19,7 @@
                         <div class="ml-10 flex items-baseline space-x-4">
                             <x-nav-link href="/" :urlCheck="request()->is('/')">Home</x-nav-link>
                             <x-nav-link href="/about" :urlCheck="request()->is('about')">About</x-nav-link>
-                            <x-nav-link href="/contact" :urlCheck="request()->is('contact')">Contact</x-nav-link>
+                            <x-nav-link type="button" :urlCheck="request()->is('contact')">Contact</x-nav-link>
                         </div>
                     </div>
                 </div>
