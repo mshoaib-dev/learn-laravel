@@ -1,7 +1,6 @@
 <?php
 namespace App\Models;
 
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
