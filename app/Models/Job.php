@@ -41,5 +41,6 @@ class Job {
         {
             abort(404);
         }
+        return $job;
     }
 }
