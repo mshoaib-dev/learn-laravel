@@ -4,11 +4,14 @@
     </x-slot:heading>
     <h1>Welcome on Jobs-listing Page.</h1>
     <br>
-    <ul>
+    <div class = space-y-4>
     @foreach($jobs as $job)
-        <a href="jobs/{{$job['id']}} " class="text-blue-500 hover:underline">
-            <li><strong>{{$job["id"]}}-{{$job["title"]}}: </strong> Pays {{$job["Salary"]}} per year and experience of {{$job["Experience"]}} years</li>
+        <a href="/jobs/{{$job['id']}} " class="block px-4 py-4 border border-gray-300 rounded-lg">
+            <div class="font-bold text-blue-800 text-sm">{{$job->employer->name}}</div>
+            <div>
+                <strong>{{$job["title"]}}: </strong> Pays {{$job["salary"]}} per year and experience of {{$job["experience"]}} years
+            </div>
         </a>
     @endforeach
-    </ul>
+    </div>
 </x-layout>
