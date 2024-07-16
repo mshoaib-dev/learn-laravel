@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('Home');
+    return view('home');
 });
 
 Route::get('/contact', function () {
@@ -12,14 +12,25 @@ Route::get('/contact', function () {
 });
 
 Route::get('/jobs', function () {
-    $jobs = Job::with('employer')->simplePaginate(4);
+    $jobs = Job::with('employer')->latest()->simplePaginate(4);
     return view('jobs.index', ["jobs" => $jobs]);
 });
 
 //create a job
 Route::get('/jobs/create', function () {
-    dd('M.Shoaib');
-//    return view('job.show', ["job.show"=>$job]);
+    return view('jobs.create');
+});
+
+Route::post('/jobs', function () {
+
+    // validation...
+    Job::create([
+      "employer_id"=>Employer::find(5)->id,
+      "title"=>request('title'),
+      "salary"=>request('salary'),
+      "experience"=>request('experience'),
+    ]);
+    return redirect("/jobs");
 });
 Route::get('/jobs/{id}', function ($id) {
    $job = Job::find($id);

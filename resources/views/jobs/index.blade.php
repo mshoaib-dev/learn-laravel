@@ -2,8 +2,9 @@
     <x-slot:heading>
         Jobs Listing
     </x-slot:heading>
-    <h1>Welcome on Jobs-listing Page.</h1>
-    <br>
+    <h1>Welcome on Jobs-listing Page.</h1><br>
+    <a href="jobs/create" class="text-blue-800 hover:underline font-bold border border-gray-800"> Create your interesting Job </a>
+    <br><br>
     <div class = space-y-4>
     @foreach($jobs as $job)
         <a href="/jobs/{{$job['id']}} " class="block px-4 py-4 border border-gray-300 rounded-lg">
