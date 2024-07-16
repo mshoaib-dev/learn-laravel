@@ -8,6 +8,8 @@ class Job extends Model {
     use HasFactory;
     protected $table = "job_listings";
     protected $fillable = ['employer_id','title', 'salary', 'experience'];
+// given is to disable $fillable, and it contains the fields that should be guarded, from Mass Assign
+//    protected $guarded = [];
 
     public function employer()
     {
