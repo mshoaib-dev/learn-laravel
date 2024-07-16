@@ -12,13 +12,17 @@ Route::get('/contact', function () {
 });
 
 Route::get('/jobs', function () {
-//    $jobs = Job::with('employer')->simplePaginate(4);
-    $jobs = Job::with('employer')->paginate(4);
-//    $jobs = Job::with('employer')->cursorPaginate(4);
-    return view('jobs', ["jobs" => $jobs]);
+    $jobs = Job::with('employer')->simplePaginate(4);
+    return view('jobs.index', ["jobs" => $jobs]);
 });
 
+//create a job
+Route::get('/jobs/create', function () {
+    dd('M.Shoaib');
+//    return view('job.show', ["job.show"=>$job]);
+});
 Route::get('/jobs/{id}', function ($id) {
    $job = Job::find($id);
-   return view('job', ["job"=>$job]);
+   return view('jobs.show', ["job"=>$job]);
 });
+
