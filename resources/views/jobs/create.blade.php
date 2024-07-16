@@ -14,8 +14,11 @@
                         <label for="title" class="block text-sm font-medium leading-6 text-gray-900">Title</label>
                         <div class="mt-2">
                             <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus:within:ring-inset focus-withing:ring-indigo-600 sm:max-w-md">
-                                <input type="text" name="title" id="title" class="block flex-1 border-0 bg-transparent py-1.5 px-3 text-gray-900 placeholder: text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Project Manager">
+                                <input type="text" name="title" id="title" class="block flex-1 border-0 bg-transparent py-1.5 px-3 text-gray-900 placeholder: text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="Project Manager" required>
                             </div>
+                            @error('title')
+                            <p class="text-red-500 text-xs font-semibold italic mt-1">{{  $message }}</p>
+                            @enderror
                         </div>
                     </div>
 
@@ -23,8 +26,11 @@
                         <label for="salary" class="block text-sm font-medium leading-6 text-gray-900">Salary</label>
                         <div class="mt-2">
                             <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus:within:ring-inset focus-withing:ring-indigo-600 sm:max-w-md">
-                                <input type="text" name="salary" id="salary" class="block flex-1 border-0 bg-transparent py-1.5 px-3 text-gray-900 placeholder: text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="100K USD">
+                                <input type="text" name="salary" id="salary" class="block flex-1 border-0 bg-transparent py-1.5 px-3 text-gray-900 placeholder: text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="100K USD" required>
                             </div>
+                            @error('salary')
+                            <p class="text-red-500 text-xs font-semibold italic mt-1">{{  $message }}</p>
+                            @enderror
                         </div>
                     </div>
 
@@ -32,11 +38,25 @@
                         <label for="experience" class="block text-sm font-medium leading-6 text-gray-900">Experience</label>
                         <div class="mt-2">
                             <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus:within:ring-inset focus-withing:ring-indigo-600 sm:max-w-md">
-                                <input type="text" name="experience" id="experience" class="block flex-1 border-0 bg-transparent py-1.5 px-3 text-gray-900 placeholder: text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="5 years">
+                                <input type="text" name="experience" id="experience" class="block flex-1 border-0 bg-transparent py-1.5 px-3 text-gray-900 placeholder: text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="5 years" required>
                             </div>
+                            @error('experience')
+                            <p class="text-red-500 text-xs font-semibold italic mt-1">{{  $message }}</p>
+                            @enderror
                         </div>
                     </div>
                 </div>
+
+{{--                rendering error response of validations--}}
+{{--                <div class="mt-2">--}}
+{{--                    @if($errors->any())--}}
+{{--                        <ul>--}}
+{{--                            @foreach($errors->all() as $error)--}}
+{{--                                <li class="text-red-400 text-xs font-semibold italic">{{ $error }}</li>--}}
+{{--                            @endforeach--}}
+{{--                        </ul>--}}
+{{--                    @endif--}}
+{{--                </div>--}}
             </div>
         </div>
 
