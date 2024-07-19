@@ -64,11 +64,6 @@ Route::patch('/jobs/{id}', function ($id) {
     //authorize ... later
     //update
     $job = Job::findOrFail($id); // this method covers the null id's as well
-//    $job->title = request('title');
-//    $job->salary = request('salary');
-//    $job->experience = request('experience');
-//    $job->save();
-    //OR
     $job->update([
         'title'=>request('title'),
         'salary'=>request('salary'),
