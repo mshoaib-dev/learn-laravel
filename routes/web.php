@@ -9,7 +9,3 @@ Route::view('/contact', 'contact');
 
 // Route-Resource resource(string $name, string $controller, array $options = ['only'=>[], 'except'=>[]])
 Route::resource('jobs', JobController::class);
-
-
-
-
