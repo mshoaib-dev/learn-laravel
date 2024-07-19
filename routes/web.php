@@ -42,28 +42,25 @@ Route::post('/jobs', function () {
 });
 
 //show
-Route::get('/jobs/{id}', function ($id) {
-   $job = Job::find($id);
+Route::get('/jobs/{job}', function (Job $job) {
    return view('jobs.show', ["job"=>$job]);
 });
 
 //edit
-Route::get('/jobs/{id}/edit', function ($id) {
-    $job = Job::find($id);
+Route::get('/jobs/{job}/edit', function (Job $job) {
     return view('jobs.edit', ["job"=>$job]);
 });
 
 //update
-Route::patch('/jobs/{id}', function ($id) {
+Route::patch('/jobs/{job}', function (Job $job) {
+    //authorize ... later
     //validate
     request()->validate([
         'title'=>['required', 'min:3'],
         'salary'=>['required'],
         'experience'=>['required', 'integer'],
     ]);
-    //authorize ... later
     //update
-    $job = Job::findOrFail($id); // this method covers the null id's as well
     $job->update([
         'title'=>request('title'),
         'salary'=>request('salary'),
@@ -71,10 +68,10 @@ Route::patch('/jobs/{id}', function ($id) {
     ]);
     //persist update() will automatically save in the DB
     //redirect
-    return redirect('/jobs/'.$id);
+    return redirect('/jobs/'.$job['id']);
 });
 //destroy
-Route::delete('/jobs/{id}', function ($id) {
-    Job::findOrFail($id)->delete();
+Route::delete('/jobs/{job}', function (Job $job) {
+    $job->delete();
     return redirect('/jobs');
 });
