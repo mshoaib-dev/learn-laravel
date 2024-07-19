@@ -12,12 +12,10 @@ class JobController extends Controller
         $jobs = Job::with('employer')->latest()->simplePaginate(4);
         return view('jobs.index', ["jobs" => $jobs]);
     }
-
     public function create()
     {
         return view('jobs.create');
     }
-
     public function store()
     {
         //validate
@@ -37,17 +35,14 @@ class JobController extends Controller
         return redirect("/jobs");
 
     }
-
     public function show(Job $job)
     {
         return view('jobs.show', ["job"=>$job]);
     }
-
     public function edit(Job $job)
     {
         return view('jobs.edit', ["job"=>$job]);
     }
-
     public function update(Job $job)
     {
         //authorize ... later
@@ -67,7 +62,6 @@ class JobController extends Controller
         //redirect
         return redirect('/jobs/'.$job['id']);
     }
-
     public function destroy(Job $job)
     {
         $job->delete();
