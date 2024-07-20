@@ -70,6 +70,7 @@ Route::patch('/jobs/{job}', function (Job $job) {
     //redirect
     return redirect('/jobs/'.$job['id']);
 });
+
 //destroy
 Route::delete('/jobs/{job}', function (Job $job) {
     $job->delete();
