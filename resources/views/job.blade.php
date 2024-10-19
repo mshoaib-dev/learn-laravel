@@ -3,5 +3,5 @@
         Job
     </x-slot:heading>
     <h1 class="text-green-800"><strong>{{$job["title"]}}</strong></h1>
-    <p>Pays {{$job["Salary"]}} per year and experience of {{$job["Experience"]}} years</p>
+    <p>Pays <strong>{{$job["salary"]}}</strong> per year and experience of <strong>{{$job["experience"]}}</strong> year(s)</p>
 </x-layout>
